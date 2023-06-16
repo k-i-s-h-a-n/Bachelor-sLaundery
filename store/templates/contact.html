@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %} contact {% endblock title %}
+{% block body %}
+<style>
+  /* Add custom styles for the container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Add animation styles for the form inputs */
+  .form-control {
+    transition: border-color 0.3s ease;
+  }
+
+  /* Apply animation effect on form input focus */
+  .form-control:focus {
+    border-color: #ff6b6b;
+  }
+
+  /* Add animation styles for the submit button */
+  .btn-primary {
+    transition: background-color 0.3s ease;
+  }
+
+  /* Apply animation effect on submit button hover */
+  .btn-primary:hover {
+    background-color: #ff6b6b;
+  }
+
+  /* Add animation styles for the background image */
+  .container-fluid {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-top: 60%;
+  }
+
+  .container-fluid img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Apply animation effect on background image load */
+  .container-fluid img.loaded {
+    opacity: 1;
+  }
+</style>
+
+<div class="container-fluid px-0 mb-2">
+    <img src="/static/img/contact.jpg" class="d-block w-100 loaded" alt="..." width="400" height="600">
+</div>
+
+<div class="container mb-3">
+    <h1 class="text-center">Contact Us</h1>
+    <form method="post" action="/contact/">
+    {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name...">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email...">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number...">
+        </div>
+       
+        <div class="form-group">
+            <label for="desc">Reason for contact...</label>
+            <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+        </div>
+        <center><button class="btn btn-primary" type="submit">Submit</button></center>
+    </form>
+</div>
+
+<script>
+  // Add class to the background image when it is loaded
+  var img = document.querySelector('.container-fluid img');
+  if (img.complete) {
+    img.classList.add('loaded');
+  } else {
+    img.addEventListener('load', function() {
+      img.classList.add('loaded');
+    });
+  }
+</script>
+
+{% endblock body %}

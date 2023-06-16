@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Forms</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <h1 class="h1">Registered with us <small>Be a part of our community</small></h1>
+                    <p style="font-weight:bold;color:red;">Bachelor's Laundery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="well well-sm">
+                    <form action="" method="POST" role="form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    {{ form.username }}
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                        {{ form.email }}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password1">Password</label>
+                                    {{ form.password1 }}
+                                </div>
+                                <div class="form-group">
+                                    <label for="password2">Confirm Password</label>
+                                    {{ form.password2 }}
+                                    {% if form.password2.errors %}
+                                        <p class="text-danger">{{ form.password2.errors }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="first_name">First Name</label>
+                                    {{ form.first_name }}
+                                </div>
+                                <div class="form-group">
+                                    <label for="last_name">Last Name</label>
+                                    {{ form.last_name }}
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                <address>
+                    <strong>In Dreams</strong><br>
+                    Currently in imaginations<br>
+                    <abbr title="Phone">34**62*79</abbr>
+                </address>
+                <address>
+                    <strong>Bachelor's Laundery</strong><br>
+                    <a href="mailto:#">kishfan86@gmail.com</a>
+                </address>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

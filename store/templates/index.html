@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+
+
+<style>
+  .attractive-heading {
+    font-size: 32px;
+    color: #0bff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .attractive-heading {
+    font-size: 32px;
+    color: #ff4081;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img {
+    object-fit: cover;
+    height: 300px;
+  }
+
+  .rounded-circle {
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .rounded-circle:hover {
+    transform: rotate(360deg);
+
+    
+  }
+
+  /* Add custom styles for the featurette section */
+  .featurette {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+
+  /* Style the featurette heading */
+  .featurette-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+
+  /* Style the featurette lead paragraph */
+  .featurette p.lead {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+
+  /* Style the featurette image */
+  .featurette-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  /* Apply hover effect on the featurette elements */
+  .featurette:hover .featurette-heading,
+  .featurette:hover .featurette p.lead,
+  .featurette:hover .featurette-image {
+    transform: scale(1.05);
+  }
+
+  /* Add custom styles for the attractive heading */
+  .attractive-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  /* Apply hover effect on the attractive heading */
+  .attractive-heading:hover {
+    color: #ff6b6b;
+  }
+</style>
+<main role="main">
+  <marquee direction="right" behavior="alternate" style="border: black 0px solid; background-color: #f5f5f5; padding: 1px;">
+    <b style="font-size: 14px; color: #ff4081;">Bachelor's Laundry Welcomes You!</b>
+  </marquee>
+</main>
+
+
+    
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle"
+            src="/static/img/h2.jpg"
+            alt="Wash" width="140" height="140">
+          <h2>Wash</h2>
+          <p>Embrace the simple pleasure of laundered garments, where cleanliness meets comfort.</p>
+          <p><a class="btn btn-secondary" href="/services" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle"
+            src="/static/img/h2.jpg"
+            alt="Clean" width="140" height="140">
+          <h2>Clean</h2>
+          <p>The process of rinsing, soaking, and washing clothes with detergents helps to remove dirt.</p>
+          <p><a class="btn btn-secondary" href="/services" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle"
+            src="/static/img/h3.jpg"
+            alt="Dry" width="140" height="140">
+          <h2>Dry</h2>
+          <p>Laundering: Transforming the ordinary into the extraordinary, one garment at a time.</p>
+          <p><a class="btn btn-secondary" href="/services" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+    
+      <!-- START THE FEATURETTES -->
+    
+      <hr class="featurette-divider">
+    
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"> Laundry is a fundamental part of our daily routine, <span class="text-muted">ensuring that our clothes remain fresh and clean. </span>
+          </h2>
+          <p class="lead">Laundry is an indispensable aspect of our everyday lives, serving as a cornerstone in maintaining the freshness and cleanliness of our clothes. It is a necessary ritual that allows us to confidently step out into the world, knowing that our garments are pristine and presentable. Whether we tackle the task ourselves or rely on laundry services, this essential chore plays a vital role in upholding personal hygiene and keeping our wardrobes in impeccable condition. From removing dirt and stains to providing a sense of comfort and confidence, laundry is the key to preserving the quality and appearance of our clothing.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+            style="width: 500px; height: 500px;"
+            src="/static/img/h4.jpg"
+            data-holder-rendered="true">
+        </div>
+      </div>
+    
+      <hr class="featurette-divider">
+    
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Laundering is not just about cleanliness; <span class="text-muted"> it also involves caring for our garments and treating them with respect.</span></h2>
+          <p class="lead">Laundering is more than just removing dirt and stains from our clothes; it is an act of care and respect towards our garments. It involves understanding the fabric, selecting the appropriate washing method, and handling the clothing delicately. By treating our garments with care, we can help preserve their quality, color, and texture, ensuring that they last longer and continue to look their best. Laundering becomes a mindful practice, a way of expressing appreciation for the clothes we wear and the effort that goes into creating them. It is a gesture of respect towards the garments that accompany us through our daily lives, allowing us to present ourselves with confidence and pride.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+            src="/static/img/h5.jpg"
+            data-holder-rendered="true" style="width: 500px; height: 500px;">
+        </div>
+      </div>
+    
+      <hr class="featurette-divider">
+    
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Whether we do laundry ourselves or entrust it to professionals, <span class="text-muted">the process of laundering keeps our clothes in top condition.</span></h2>
+          <p class="lead">Whether we take on the task of laundry ourselves or rely on the expertise of professionals, the ultimate goal remains the same: to keep our clothes in impeccable condition. Through proper laundering techniques, we ensure that our garments are treated with care, removing dirt, stains, and odors effectively. By entrusting our laundry to professionals, we benefit from their expertise in handling different fabrics, using specialized detergents, and employing advanced techniques. However, for those who prefer the hands-on approach, doing laundry ourselves allows us to maintain a sense of control and personal touch. Regardless of the method chosen, the process of laundering plays a vital role in preserving the longevity and appearance of our beloved clothes, keeping them fresh, clean, and ready to be worn with confidence.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+            src="/static/img/h6.jpg"
+            data-holder-rendered="true" style="width: 500px; height: 500px;">
+        </div>
+      </div>
+    
+      <hr class="featurette-divider">
+    
+      <!-- /END THE FEATURETTES -->
+    </div>
+
+
+
+
+    
+    
+    
+<div class="container">
+  <h1 class="my-2 attractive-heading">Why Bachelor's Laundry</h1>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="/static/img/w1.png" class="d-block w-100" alt="Regular Cleaning">
+        <div class="card-body">
+          <p class="text-center">HAPPY CUSTOMERS &nbsp;
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="/static/img/w3.png" class="d-block w-100" alt="Dry Cleaning">
+        <div class="card-body">
+          <p class="text-center">100% SATISFACTORY &nbsp;
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="/static/img/w2.png" class="d-block w-100" alt="Handwash Cleaning">
+        <div class="card-body">
+          <p class="text-center">WE DONATE &nbsp;
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    
+    
+    
+    
+    
+    
+    <!-- /.container -->
+
+
+    <!-- FOOTER -->
+  
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="../../assets/js/vendor/holder.min.js"></script>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none"
+    style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+    <defs>
+      <style type="text/css"></style>
+    </defs>
+    <text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">
+      500x500</text>
+  </svg>
+</body>
+
+</html>
+
+
+{% endblock body%}

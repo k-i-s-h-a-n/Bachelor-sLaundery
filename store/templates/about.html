@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% block title %} about us {% endblock title %}
+{% block body %}
+<style>
+  .col-lg-5 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Add custom styles for the team section */
+  .team-item {
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+
+  /* Apply hover effect on the team items */
+  .team-item:hover {
+    transform: scale(1.1);
+  }
+
+    .col-lg-5 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Add custom styles for the team section */
+  .team-item {
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+
+  /* Apply hover effect on the team items */
+  .team-item:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .col-lg-6 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .col-lg-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .col-lg-6 img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .order-lg-1,
+    .order-lg-2 {
+      order: unset !important;
+    }
+  }
+
+
+  /* Add custom styles for the heading */
+  .featurette-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInDown 1s ease forwards;
+  }
+
+  /* Add custom styles for the images */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  /* Define keyframes for the animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 19999999;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+</style>
+
+<body>
+  <div class="bg-light">
+    <div class="container py-5">
+      <div class="row h-100 align-items-center py-5">
+        <div class="col-lg-6">
+          <h1 class="featurette-heading"> Introducing Bachelor's Laundry: <span class="text-muted">Your Trusted Laundry Service Provider. </span>
+          </h1>
+          <p class="lead text-muted mb-0">Are you a busy professional, a student, or someone who values their time and convenience? At Bachelor's Laundry, we understand the demands of your modern lifestyle and strive to simplify your laundry experience. We offer a professional laundry service that caters specifically to the needs of busy individuals like you.<br>
+            Our team of expert cleaners ensures that your garments are treated with the utmost care and attention to detail.</p>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block"><img src="/static/img/aa1.png" alt="" class="img-fluid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <div class="bg-white py-5">
+      <div class="container py-5">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+            <h2 class="font-weight-light featurette-heading">We are there, no need to worry anymore!</h2>
+            <p class="font-italic text-muted mb-4">From anywhere and anytime, you can make an order.<br>
+              Stress should be a powerful driving force, not an obstacle.</p>
+            <a href="/services/add services/" class="btn btn-light px-5 rounded-pill shadow-sm">Book</a>
+          </div>
+          <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
+            <img src="/static/img/aa3.png" alt="" class="img-fluid mb-4 mb-lg-0">
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5 px-5 mx-auto">
+            <img src="/static/img/aq1.png" alt="" class="img-fluid mb-4 mb-lg-0">
+          </div>
+          <div class="col-lg-6">
+            <i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+            <h2 class="font-weight-light featurette-heading">Experience the Convenience of Bachelor's Laundry Today!</h2>
+            <p class="font-italic text-muted mb-4">Discover the freedom of outsourcing your laundry chores to Bachelor's Laundry. Let us take care of your clothing while you focus on your professional and personal endeavors. Our reliable and professional service is designed to simplify your life and give you back valuable time.<br><br>
+              Visit our website or download our user-friendly mobile app to schedule your laundry pickup today. Experience the convenience, quality, and reliability of Bachelor's Laundry. We're here to make your laundry experience effortless and efficient, so you can enjoy life to the fullest.</p>
+            <a href="/services" class="btn btn-light px-5 rounded-pill shadow-sm">Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    
+    <div class="container py-5">
+      <div class="row text-center">
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4 team-item">
+            <img src="/static/img/a2.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Kishan Kumar</h5>
+            <span class="small text-uppercase text-muted">CTO - (Backend Developer & Database Management)</span><br>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/kishan-kumar-a72b36170/" target="_blank">click here</a>
+          </div>
+        </div>
+        <!-- End -->
+
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4 team-item">
+            <img src="/static/img/abhi.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Abhishek Kumar</h5>
+            <span class="small text-uppercase text-muted">CEO - (Frontend Developer & Founder)</span><br>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/abhishek-kumar-39a94b21b/" target="_blank">click here</a>
+          </div>
+        </div>
+        
+        <!-- End -->
+
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4 team-item">
+            <img src="/static/img/papu.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Papu Kumar</h5>
+            <span class="small text-uppercase text-muted">CFO - (Marketing & Business Operations)</span><br>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/pappu-kumar-das-b390ba202" target="_blank">click here</a>
+          </div>
+        </div>
+        <!-- End -->
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock body%}

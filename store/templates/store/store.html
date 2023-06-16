@@ -1,0 +1,87 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<style>.thumbnail {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    padding: 10px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.product-card:hover .product-details {
+    background-color: #fff;
+}
+
+.product-name {
+    margin-top: 0;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-price {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.add-btn {
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+
+
+</style>
+<div class="row">
+    {% for product in products %}
+    <div class="col-lg-4">
+        <div class="product-card">
+            <center><img class="thumbnail" src="{{product.imageURL}}" alt="{{product.name}}"></center>
+            <div class="product-details">
+                <center><h6 class="product-name"><strong>{{product.name}}</strong></h6></center>
+                <div class="product-actions">
+                    <button data-product={{product.id}} data-action="add" 
+                        class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+                    <h4 class="product-price">Rs{{product.price|floatformat:2}}/kg</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
